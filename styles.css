@@ -1,8 +1,12 @@
+@font-face {
+    font-family: JetBrains;
+    src: url("imgs/fonte/JetBrainsMono.ttf") format("opentype");
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: JetBrains Mono;
+    font-family: JetBrains;
 }
 
 html {
