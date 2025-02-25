@@ -38,7 +38,7 @@ body{
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 3rem;
+    gap: 2rem;
 }
 .navbar-item {
     text-decoration: none;
