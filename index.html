@@ -1,12 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Thurflecks | Portfólio</title>
 </head>
+
 <body>
-    
+    <div class="particulas"></div>
+    <header>
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li>
+                    <a class="navbar-item" href="#inicio">Início</a>
+                </li>
+                <li>
+                    <a class="navbar-item" href="#sobre">Sobre</a>
+                </li>
+                <li>
+                    <a class="navbar-item" href="#projetos">Projetos</a>
+                </li>
+                <li>
+                    <a class="navbar-item" href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="inicio" id="inicio">
+            <img src="imgs/zero.jpg" alt="Foto de perfil" class="foto-perfil">
+            <h1 class="titulo">
+                Arthur Felix
+            </h1>
+            <p class="conteudo-titulo">Desenvolver Backend</p>
+        </section>
+
+        <section class="sobre" id="sobre">
+            <h2 class="titulo-sobre">Sobre mim</h2>
+            <div class="conteudo-sobre">
+                <p>Sou um desenvolvedor backend apaixonado por criar soluções eficientes e escaláveis. Tenho experiência
+                    com diversas tecnologias, incluindo Node.js, Python e bancos de dados SQL e NoSQL. Gosto de desafios
+                    e estou sempre em busca de aprender novas tecnologias para aprimorar meus projetos.</p>
+            </div>
+        </section>
+
+        <section class="projetos" id="projetos">
+            <h2 class="projeto-name">Projetos</h2>
+            <div class="projetos-caixa">
+                <div class="projetos-container">
+                    <img class="foto-projeto" src="/imgs/zero.jpg" alt="">
+                    <h4 class="titulo-projeto">FaceCopy</h4>
+                    <p class="paragrafo-projeto">FacebookCopy é uma aplicação web que replica algumas funcionalidades
+                        básicas da rede social Facebook. O site permite aos usuários interagir através de postagens e
+                        comentários de forma simplificada. </p>
+                </div>
+                <div class="projetos-container">
+                    <img class="foto-projeto" src="/imgs/zero.jpg" alt="">
+                    <h4 class="titulo-projeto">Tradutor</h4>
+                    <p class="paragrafo-projeto">Tradutor é uma aplicação gráfica em Python, construída utilizando a
+                        biblioteca CustomTkinter, que permite traduzir textos entre diferentes idiomas de maneira rápida
+                        e intuitiva. </p>
+                </div>
+                <div class="projetos-container">
+                    <img class="foto-projeto" src="/imgs/zero.jpg" alt="">
+                    <h4 class="titulo-projeto">LudovicenseStudio</h4>
+                    <p class="paragrafo-projeto">O LudovicenseStudio é uma aplicação web para gerenciamento de produtos
+                        e pedidos. A plataforma oferece um sistema de carrinho de compras, autenticação de usuários e
+                        administradores, além de funcionalidades de envio de mensagens e gestão de pedidos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contato" id="contato">
+            <h2 class="contato-titulo">Entre em Contato</h2>
+            <form onsubmit="enviarMensagem(event)" class="form">
+                <div class="form-div">
+                    <input type="text" class="form-input" placeholder="Nome" id="nome">
+                </div>
+                <div class="form-div">
+                    <textarea id="mensagem" type="text" class="form-input" rows="5" placeholder="Mensagem"></textarea>
+                </div>
+                <button type="submit" class="botao-form">Enviar Mensagem</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>    
+        <a href="https://github.com/Thurflecks">Thurflecks</a>
+        <p>© 2025 Todos os direitos reservados.</p>
+        <p>thurflecks.dev@gmail.com</p>
+    </footer>
+
+    <script>
+        function enviarMensagem(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById("nome").value;
+            const mensagem = document.getElementById("mensagem").value;
+            const numero = "5598970061774";
+            const texto = `Olá, meu nome é ${nome} e gostaria de entrar em contato com você. ${mensagem}`;
+
+            const msgFormatada = encodeURIComponent(texto)
+            const url = `https://wa.me/${numero}?text=${msgFormatada}`;
+            console.log(url);
+            window.open(url, '_blank');
+        }
+    </script>
 </body>
+
 </html>

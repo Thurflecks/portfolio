@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: JetBrains Mono;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primaria: #4f46e5;
+    --secundaria: #7c3aed;
+    --escuro: #0f172a;  
+    --maisEscuro: #0a0f1c;
+    --claro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+body{
+    background-color: var(--escuro);
+    color: var(--claro);
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    background: rgba(15, 23, 42, 0.8);
+    padding: 1.5rem;
+}
+.navbar-list{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 3rem;
+}
+.navbar-item {
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+.navbar-item::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    transition: width 0.5s ease;
+}
+.navbar-item:hover::after{
+   width: 100%;
+}
+
+
+.foto-perfil{
+    width: 350px; 
+    height: 350px;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow:0 10px 20px rgba(79, 70, 229, 0.2);
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+.inicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.titulo {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 1rem;
+    color: var(--secundaria);
+}
+.conteudo-titulo {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--claro);
+}
+
+.sobre {
+    padding: 6rem 2rem;
+} 
+
+.titulo-sobre {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 1rem;
+    text-align: center;
+}
+.conteudo-sobre {
+    border: 1px solid var(--vidro);
+    padding: 2rem;
+    margin: 0 auto;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    max-width: 800px;
+}
+.conteudo-sobre p { 
+    text-align: center;
+    font-size: 1.2rem;
+   
+}
+.projeto-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 1rem;
+    text-align: center;
+}
+.projetos {
+    padding: 6rem 2rem;
+}
+.projetos-caixa {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.foto-projeto {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.projetos-container{
+    border: 1px solid var(--vidro);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.titulo-projeto {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1rem;
+    text-align: center;
+}
+
+.projetos-container:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow:0 10px 20px rgba(79, 70, 229, 0.2)
+}
+
+.contato {
+    padding: 6rem 2rem;
+}
+.contato-titulo {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 1rem;
+    text-align: center;
+}
+.form{
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid var(--vidro);
+    border-radius: 16px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--vidro);
+    background-color: var(--vidro);
+    outline: none;
+    color: var(--claro);
+}
+.form-input:focus {
+    border-color: var(--primaria);
+    box-shadow:0 10px 20px rgba(79, 70, 229, 0.2)
+}
+
+.botao-form{
+    background-color: var(--primaria);
+    color: var(--claro);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+.botao-form:hover {
+    background-color: var(--secundaria);
+    box-shadow:0 10px 20px rgba(79, 70, 229, 0.2)
+}
+
+.particulas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;   
+    z-index: -1;
+    opacity: 0.5;
+    background:
+    radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
+    var(--maisEscuro) ;
+}
+
+footer {
+    background-color: var(--maisEscuro);
+    color: var(--claro);
+    text-align: center;
+    padding: 1rem;
+}
+
+footer a {
+    color: var(--secundaria);
+    text-decoration: none;
+
+}
+
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
