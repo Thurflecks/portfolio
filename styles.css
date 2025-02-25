@@ -79,13 +79,13 @@ body{
     height: 100vh;
 }
 .titulo {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     margin: 1rem;
     color: var(--secundaria);
     text-decoration: none;
     transition: all 0.5s ease;
-
+    cursor: pointer;
 }
 .titulo:hover {
     transform: translateY(-3px) scale(1.02);
@@ -102,7 +102,7 @@ body{
 } 
 
 .titulo-sobre {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     margin: 1rem;
     text-align: center;
@@ -122,9 +122,9 @@ body{
    
 }
 .projeto-name {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    margin: 1rem;
+    margin: 2rem;
     text-align: center;
 }
 .projetos {
@@ -142,6 +142,7 @@ body{
     height: 200px;
     width: 100%;
     object-fit: cover;
+    border-radius: 8px;
 }
 .projetos-container{
     border: 1px solid var(--vidro);
@@ -151,6 +152,9 @@ body{
     padding: 1rem;
     overflow: hidden;
     transition: transform 0.5s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--claro);
 }
 
 .titulo-projeto {
@@ -169,7 +173,7 @@ body{
     padding: 6rem 2rem;
 }
 .contato-titulo {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     margin: 1rem;
     text-align: center;
@@ -235,9 +239,8 @@ footer {
 }
 
 footer a {
-    color: var(--secundaria);
+    color: var(--primaria);
     text-decoration: none;
-
 }
 
 @keyframes flutuar {
