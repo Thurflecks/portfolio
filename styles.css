@@ -96,6 +96,12 @@ body{
     font-weight: 500;
     color: var(--claro);
 }
+.linguagens{
+    margin: 1rem;
+}
+.icons{
+    font-size: 32px;
+}
 
 .sobre {
     padding: 6rem 2rem;
@@ -215,6 +221,9 @@ body{
 .botao-form:hover {
     background-color: var(--secundaria);
     box-shadow:0 10px 20px rgba(79, 70, 229, 0.2)
+}
+.zap{
+    font-size: 1rem;
 }
 
 .particulas {
