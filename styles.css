@@ -2,6 +2,7 @@
     font-family: JetBrains;
     src: url("imgs/fonte/JetBrainsMono.ttf") format("opentype");
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -16,17 +17,18 @@ html {
 :root {
     --primaria: #4f46e5;
     --secundaria: #7c3aed;
-    --escuro: #0f172a;  
+    --escuro: #0f172a;
     --maisEscuro: #0a0f1c;
     --claro: #e2e8f0;
     --vidro: rgba(255, 255, 255, 0.1);
 }
-body{
+
+body {
     background-color: var(--escuro);
     color: var(--claro);
 }
 
-.navbar{
+.navbar {
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -34,12 +36,14 @@ body{
     background: rgba(15, 23, 42, 0.8);
     padding: 1.5rem;
 }
-.navbar-list{
+
+.navbar-list {
     display: flex;
     justify-content: center;
     list-style: none;
     gap: 2rem;
 }
+
 .navbar-item {
     text-decoration: none;
     color: var(--claro);
@@ -47,7 +51,8 @@ body{
     position: relative;
     padding: 0.5rem 0;
 }
-.navbar-item::after{
+
+.navbar-item::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -57,38 +62,42 @@ body{
     background: linear-gradient(90deg, var(--primaria), var(--secundaria));
     transition: width 0.5s ease;
 }
-.navbar-item:hover::after{
-   width: 100%;
+
+.navbar-item:hover::after {
+    width: 100%;
 }
 
 
-.foto-perfil{
-    width: 350px; 
+.foto-perfil {
+    width: 350px;
     height: 350px;
     margin: 0 auto;
     border-radius: 50%;
-    box-shadow:0 10px 20px rgba(79, 70, 229, 0.2);
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
     animation: flutuar 3s ease-in-out infinite;
 }
 
-.inicio{
+.inicio {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
 }
+
 .titulo {
     font-size: 2.5rem;
     font-weight: 700;
     margin: 1rem;
-    color: var(--secundaria);
+    color: var(--primaria);
     text-decoration: none;
     transition: all 0.5s ease;
     cursor: pointer;
 }
+
 .titulo:hover {
     transform: translateY(-3px) scale(1.02);
+    color: var(--secundaria);
 }
 
 .conteudo-titulo {
@@ -96,16 +105,18 @@ body{
     font-weight: 500;
     color: var(--claro);
 }
-.linguagens{
+
+.linguagens {
     margin: 1rem;
 }
-.icons{
+
+.icons {
     font-size: 32px;
 }
 
 .sobre {
     padding: 6rem 2rem;
-} 
+}
 
 .titulo-sobre {
     font-size: 2.5rem;
@@ -113,6 +124,7 @@ body{
     margin: 1rem;
     text-align: center;
 }
+
 .conteudo-sobre {
     border: 1px solid var(--vidro);
     padding: 2rem;
@@ -122,20 +134,24 @@ body{
     backdrop-filter: blur(10px);
     max-width: 800px;
 }
-.conteudo-sobre p { 
+
+.conteudo-sobre p {
     text-align: center;
     font-size: 1.2rem;
-   
+
 }
+
 .projeto-name {
     font-size: 2.5rem;
     font-weight: 700;
     margin: 2rem;
     text-align: center;
 }
+
 .projetos {
     padding: 6rem 2rem;
 }
+
 .projetos-caixa {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -150,7 +166,8 @@ body{
     object-fit: cover;
     border-radius: 8px;
 }
-.projetos-container{
+
+.projetos-container {
     border: 1px solid var(--vidro);
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.05);
@@ -172,19 +189,21 @@ body{
 
 .projetos-container:hover {
     transform: translateY(-10px) scale(1.05);
-    box-shadow:0 10px 20px rgba(79, 70, 229, 0.2)
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2)
 }
 
 .contato {
     padding: 6rem 2rem;
 }
+
 .contato-titulo {
     font-size: 2.5rem;
     font-weight: 700;
     margin: 1rem;
     text-align: center;
 }
-.form{
+
+.form {
     gap: 1rem;
     max-width: 600px;
     margin: 0 auto;
@@ -203,12 +222,13 @@ body{
     outline: none;
     color: var(--claro);
 }
+
 .form-input:focus {
     border-color: var(--primaria);
-    box-shadow:0 10px 20px rgba(79, 70, 229, 0.2)
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2)
 }
 
-.botao-form{
+.botao-form {
     background-color: var(--primaria);
     color: var(--claro);
     border: none;
@@ -217,12 +237,15 @@ body{
     cursor: pointer;
     width: 100%;
     transition: all 0.5s ease;
+    font-size: 0.9rem;
 }
+
 .botao-form:hover {
     background-color: var(--secundaria);
-    box-shadow:0 10px 20px rgba(79, 70, 229, 0.2)
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2)
 }
-.zap{
+
+.zap {
     font-size: 1rem;
 }
 
@@ -231,15 +254,26 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;   
+    height: 100%;
     z-index: -1;
     opacity: 0.5;
     background:
-    radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
-    radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
-    var(--maisEscuro) ;
+        radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
+        var(--maisEscuro);
 }
 
+.tecnologias {
+    margin: 1rem 0;
+}
+.contato-alternativo{
+    text-align: center;
+    margin: 1rem;
+}
+.email {
+    text-align: center;
+    font-size: 1rem;
+}
 footer {
     background-color: var(--maisEscuro);
     color: var(--claro);
@@ -253,9 +287,12 @@ footer a {
 }
 
 @keyframes flutuar {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-20px);
     }
