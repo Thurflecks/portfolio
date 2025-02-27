@@ -271,8 +271,11 @@ body {
     margin: 1rem;
 }
 .email {
-    text-align: center;
     font-size: 1rem;
+    text-decoration: none;
+    color: var(--primaria);
+    display: flex;
+    justify-content: center;
 }
 footer {
     background-color: var(--maisEscuro);
