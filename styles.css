@@ -95,11 +95,6 @@ body {
     cursor: pointer;
 }
 
-.titulo:hover {
-    transform: translateY(-3px) scale(1.02);
-    color: var(--secundaria);
-}
-
 .conteudo-titulo {
     font-size: 1.5rem;
     font-weight: 500;
@@ -266,17 +261,7 @@ body {
 .tecnologias {
     margin: 1rem 0;
 }
-.contato-alternativo{
-    text-align: center;
-    margin: 1rem;
-}
-.email {
-    font-size: 1rem;
-    text-decoration: none;
-    color: var(--primaria);
-    display: flex;
-    justify-content: center;
-}
+
 footer {
     background-color: var(--maisEscuro);
     color: var(--claro);
@@ -287,6 +272,23 @@ footer {
 footer a {
     color: var(--primaria);
     text-decoration: none;
+}
+.div-redes{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.redes{
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    color: var(--claro);
+    transition: all 0.5s ease;
+}
+.redes:hover {
+    color: var(--primaria);
+    transform: translateY(-5px);
 }
 
 @keyframes flutuar {
