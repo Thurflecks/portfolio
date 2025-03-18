@@ -273,23 +273,31 @@ footer a {
     color: var(--primaria);
     text-decoration: none;
 }
-.div-redes{
+
+.div-redes {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
 }
 
-.redes{
+.redes {
     font-size: 2.2rem;
     margin-bottom: 0.5rem;
     text-decoration: none;
     color: var(--claro);
     transition: all 0.5s ease;
 }
+
 .redes:hover {
     color: var(--primaria);
     transform: translateY(-5px);
 }
+
+.link-sobre {
+    color: var(--primaria);
+    text-decoration: none;
+}
+
 
 @keyframes flutuar {
 
