@@ -156,7 +156,7 @@ body {
 }
 
 .foto-projeto {
-    height: 200px;
+    min-height: 200px;
     width: 100%;
     object-fit: cover;
     border-radius: 8px;
@@ -173,8 +173,16 @@ body {
     cursor: pointer;
     text-decoration: none;
     color: var(--claro);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
+.organizar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
 .titulo-projeto {
     font-size: 1.5rem;
     font-weight: 700;
