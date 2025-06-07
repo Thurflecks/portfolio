@@ -30,12 +30,11 @@
             </ul>
         </nav>
     </header>
-
     <main>
         <section class="inicio" id="inicio">
             <img src="imgs/image.jpeg" alt="Foto de perfil" class="foto-perfil">
             <span class="titulo">Arthur Felix</span>
-            <p class="conteudo-titulo">Desenvolvedor Full Stack</p>
+            <p class="conteudo-titulo">Desenvolvedor Full Stack Júnior</p>
             <div class="linguagens">
                 <i class='bx bxl-python icons' title="python"></i>
                 <i class='bx bxl-nodejs icons' title="nodeJs"></i>
@@ -49,21 +48,20 @@
                 <i class='bx bxs-data icons' title="mysql"></i>
             </div>
         </section>
-
         <section class="sobre" id="sobre">
             <h2 class="titulo-sobre">Sobre mim</h2>
             <div class="conteudo-sobre">
                 <p>
-                    Sou desenvolvedor full stack em formação e curso Ciência da Computação (7º período).
-                    Tenho uma grande afinidade por back-end, também aprimoro minhas habilidades no front-end.
-                    Atualmente, trabalho como
-                    freelancer.
-                    Fique à vontade para explorar meus <a class="link-sobre" href="#projetos">projetos</a> e entrar em
-                    <a class="link-sobre" href="#contato">contato</a>.
+                    Sou um estudante de Ciência da Computação e estagiário em desenvolvimento de software na <a
+                        href="https://vlagronegocios.com.br/site/" class="link-sobre" target="_blank">VL
+                        Agronegócios</a>,
+                    com interesse sólido em desenvolvimento de software
+                    e comprometido com a superação de desafios técnicos. Atualmente, venho aprimorando minhas
+                    competências como desenvolvedor full stack, com foco principal no back-end, área na qual possuo
+                    maior afinidade.
                 </p>
             </div>
         </section>
-
         <section class="projetos" id="projetos">
             <h2 class="projeto-name">Projetos</h2>
             <div class="projetos-caixa">
@@ -120,7 +118,6 @@
                 </a>
             </div>
         </section>
-
         <section class="contato" id="contato">
             <h2 class="contato-titulo">Entre em Contato</h2>
             <form onsubmit="enviarMensagem(event)" class="form">
@@ -135,7 +132,6 @@
         </section>
 
     </main>
-
     <footer>
         <div class="div-redes">
             <a href="https://www.linkedin.com/in/arthur-felix-dev/" target="_blank"><i
@@ -144,22 +140,7 @@
             <a href="https://github.com/Thurflecks" target="_blank"><i class='bx bxl-github github redes'></i></a>
         </div>
     </footer>
-
-    <script>
-        function enviarMensagem(event) {
-            event.preventDefault();
-
-            const nome = document.getElementById("nome").value;
-            const mensagem = document.getElementById("mensagem").value;
-            const numero = "5598981212573";
-            const texto = `Olá, meu nome é ${nome} e gostaria de entrar em contato com você. ${mensagem}`;
-
-            const msgFormatada = encodeURIComponent(texto)
-            const url = `https://wa.me/${numero}?text=${msgFormatada}`;
-            console.log(url);
-            window.open(url, '_blank');
-        }
-    </script>
+    <script src="./app.js"></script>
 </body>
 
 </html>

@@ -131,9 +131,8 @@ body {
 }
 
 .conteudo-sobre p {
-    text-align: center;
     font-size: 1.2rem;
-
+    text-align: justify;
 }
 
 .projeto-name {
