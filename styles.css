@@ -92,7 +92,6 @@ body {
     color: var(--primaria);
     text-decoration: none;
     transition: all 0.5s ease;
-    cursor: pointer;
 }
 
 .conteudo-titulo {
@@ -107,6 +106,10 @@ body {
 
 .icons {
     font-size: 32px;
+    transition: all 0.5s ease;  
+}
+.icons:hover {
+    transform: translateY(-5px) scale(1.05);
 }
 
 .sobre {
@@ -192,6 +195,9 @@ body {
 .projetos-container:hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2)
+}
+.paragrafo-projeto{
+    text-align: justify;
 }
 
 .contato {
