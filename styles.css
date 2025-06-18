@@ -92,6 +92,7 @@ body {
     color: var(--primaria);
     text-decoration: none;
     transition: all 0.5s ease;
+    text-align: center;
 }
 
 .conteudo-titulo {
