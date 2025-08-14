@@ -107,8 +107,9 @@ body {
 
 .icons {
     font-size: 32px;
-    transition: all 0.5s ease;  
+    transition: all 0.5s ease;
 }
+
 .icons:hover {
     transform: translateY(-5px) scale(1.05);
 }
@@ -137,6 +138,25 @@ body {
 .conteudo-sobre p {
     font-size: 1.2rem;
     text-align: justify;
+}
+
+.botao-curriculo {
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    color: var(--claro);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+}
+
+.botao-curriculo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(79, 70, 229, 0.3);
 }
 
 .projeto-name {
@@ -180,12 +200,14 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+
 .organizar {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
 }
+
 .titulo-projeto {
     font-size: 1.5rem;
     font-weight: 700;
@@ -197,7 +219,8 @@ body {
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2)
 }
-.paragrafo-projeto{
+
+.paragrafo-projeto {
     text-align: justify;
 }
 
